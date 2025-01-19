@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Managelists</class>
+ <widget class="QMainWindow" name="Managelists">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>614</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manage Lists</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::RightToLeft</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #e4e4e4;
+	color: #000;
+	selection-background-color: #46a2da;
+	selection-color: #fff;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btnBack">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>530</y>
+      <width>161</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+  background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(184, 184,      184, 255),stop:1 rgba(159, 159, 159, 255));
+	color: #000;
+	min-width: 80px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #051a39;
+	padding: 5px;
+}
+QPushButton#btnBack:hover
+{
+	background-color: rgba(70,162,218,50%);
+	border: 1px solid #46a2da;
+
+}
+
+QPushButton#btnBack:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+    </property>
+    <property name="text">
+     <string>عودة</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>361</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QWidget" name="formLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>251</width>
+       <height>72</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <property name="fieldGrowthPolicy">
+       <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+      </property>
+      <property name="verticalSpacing">
+       <number>6</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblUserName">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+	background-color: transparent;
+	color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>اسم المستخدم</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::PlainText</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="inputUserName">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="inputPassword">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblUserName_2">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+	background-color: transparent;
+	color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>كلمة المرور</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::PlainText</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLineEdit" name="inputUnknown">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>81</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnAdd">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(184, 184,      184, 255),stop:1 rgba(159, 159, 159, 255));
+	color: #000;
+	min-width: 80px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #051a39;
+	padding: 5px;
+}
+QPushButton#btnAdd:hover
+{
+	background-color: rgba(70,162,218,50%);
+	border: 1px solid #46a2da;
+
+}
+
+QPushButton#btnAdd:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+        </property>
+        <property name="text">
+         <string>اضافة</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEdit">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(184, 184,      184, 255),stop:1 rgba(159, 159, 159, 255));
+	color: #000;
+	min-width: 80px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #051a39;
+	padding: 5px;
+}
+QPushButton#btnEdit:hover
+{
+	background-color: rgba(70,162,218,50%);
+	border: 1px solid #46a2da;
+
+}
+
+QPushButton#btnEdit:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+        </property>
+        <property name="text">
+         <string>تعديل</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDelete">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+  background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(184, 184,      184, 255),stop:1 rgba(159, 159, 159, 255));
+	color: #000;
+	min-width: 80px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #051a39;
+	padding: 5px;
+}
+QPushButton#btnDelete:hover
+{
+	background-color: rgba(70,162,218,50%);
+	border: 1px solid #46a2da;
+
+}
+
+QPushButton#btnDelete:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+        </property>
+        <property name="text">
+         <string>حذف</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>761</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QListView" name="listViewManageLists">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>741</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QListView 
+{
+	background-color: #f6f6f6;
+    border : none;
+    color: #000;
+    show-decoration-selected: 1; 
+    outline: 0;
+	border: 1px solid gray;
+
+}
+
+
+QListView#listViewManageLists::disabled 
+{
+	background-color: #656565;
+	color: #1b1b1b;
+    border: 1px solid #656565;
+
+}
+
+
+QListView#listViewManageLists::item 
+{
+	background-color: #f6f6f6;
+    padding: 1px;
+
+}
+
+
+QListView#listViewManageLists::item:alternate 
+{
+    background-color: #c6c6c6;
+
+}
+
+
+QListView#listViewManageLists::item:alternate:selected
+{
+    background-color: red;
+
+}
+
+
+QListView#listViewManageLists::item:selected 
+{
+	background-color: #b78620;
+	border: 1px solid #b78620;
+	color: #fff;
+
+}
+
+
+QListView#listViewManageLists::item:selected:!active 
+{
+	background-color: #46a2da;
+	border: 1px solid #46a2da;
+	color: #fff;
+
+}
+
+
+QListView#listViewManageLists::item:selected:active 
+{
+	background-color: #46a2da;
+	border: 1px solid #46a2da;
+	color: #fff;
+
+}
+
+
+QListView#listViewManageLists::item:hover {
+    background-color: #5e5e5e;
+    border: none;
+    color: #000;
+
+}</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>4</number>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>تعديل القوائم</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_4">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>70</y>
+      <width>381</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>10</y>
+       <width>361</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QRadioButton" name="rdbAgents">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QRadioButton 
+{
+	color: #000;
+	background-color: transparent;
+
+}
+
+
+QRadioButton#rdbAgents::indicator::unchecked:hover 
+{
+	background-color: darkgray;
+	border: 2px solid #46a2da;
+	border-radius: 6px;
+}
+
+
+QRadioButton#rdbAgents::indicator::checked 
+{
+	border: 2px solid #52beff;
+	border-radius: 6px;
+	background-color: #0088da;  
+	width: 9px; 
+	height: 9px; 
+
+}</string>
+          </property>
+          <property name="text">
+           <string>العملاء</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rdbMovement">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QRadioButton 
+{
+	color: #000;
+	background-color: transparent;
+
+}
+
+
+QRadioButton#rdbMovement::indicator::unchecked:hover 
+{
+	background-color: darkgray;
+	border: 2px solid #46a2da;
+	border-radius: 6px;
+}
+
+
+QRadioButton#rdbMovement::indicator::checked 
+{
+	border: 2px solid #52beff;
+	border-radius: 6px;
+	background-color: #0088da;  
+	width: 9px; 
+	height: 9px; 
+
+}</string>
+          </property>
+          <property name="text">
+           <string>الحركة</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rdbShipping">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QRadioButton 
+{
+	color: #000;
+	background-color: transparent;
+
+}
+
+
+QRadioButton#rdbShipping::indicator::unchecked:hover 
+{
+	background-color: darkgray;
+	border: 2px solid #46a2da;
+	border-radius: 6px;
+}
+
+
+QRadioButton#rdbShipping::indicator::checked 
+{
+	border: 2px solid #52beff;
+	border-radius: 6px;
+	background-color: #0088da;  
+	width: 9px; 
+	height: 9px; 
+
+}</string>
+          </property>
+          <property name="text">
+           <string>شركة الشحن</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="rdbSource">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QRadioButton 
+{
+	color: #000;
+	background-color: transparent;
+
+}
+
+
+QRadioButton#rdbSource::indicator::unchecked:hover 
+{
+	background-color: darkgray;
+	border: 2px solid #46a2da;
+	border-radius: 6px;
+}
+
+
+QRadioButton#rdbSource::indicator::checked 
+{
+	border: 2px solid #52beff;
+	border-radius: 6px;
+	background-color: #0088da;  
+	width: 9px; 
+	height: 9px; 
+
+}</string>
+          </property>
+          <property name="text">
+           <string>المصادر</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rdbSalesAgent">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QRadioButton 
+{
+	color: #000;
+	background-color: transparent;
+
+}
+
+
+QRadioButton#rdbSalesAgent::indicator::unchecked:hover 
+{
+	background-color: darkgray;
+	border: 2px solid #46a2da;
+	border-radius: 6px;
+}
+
+
+QRadioButton#rdbSalesAgen::indicator::checked 
+{
+	border: 2px solid #52beff;
+	border-radius: 6px;
+	background-color: #0088da;  
+	width: 9px; 
+	height: 9px; 
+
+}</string>
+          </property>
+          <property name="text">
+           <string>المسوقات</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="rdbFund">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>12</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QRadioButton 
+{
+	color: #000;
+	background-color: transparent;
+
+}
+
+
+QRadioButton#rdbFund::indicator::unchecked:hover 
+{
+	background-color: darkgray;
+	border: 2px solid #46a2da;
+	border-radius: 6px;
+}
+
+
+QRadioButton#rdbFund::indicator::checked 
+{
+	border: 2px solid #52beff;
+	border-radius: 6px;
+	background-color: #0088da;  
+	width: 9px; 
+	height: 9px; 
+
+}</string>
+          </property>
+          <property name="text">
+           <string>الممول</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="rdbUsers">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>12</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QRadioButton 
+{
+	color: #000;
+	background-color: transparent;
+
+}
+
+
+QRadioButton#rdbUsers::indicator::unchecked:hover 
+{
+	background-color: darkgray;
+	border: 2px solid #46a2da;
+	border-radius: 6px;
+}
+
+
+QRadioButton#rdbUsers::indicator::checked 
+{
+	border: 2px solid #52beff;
+	border-radius: 6px;
+	background-color: #0088da;  
+	width: 9px; 
+	height: 9px; 
+
+}</string>
+        </property>
+        <property name="text">
+         <string>المستخدمون</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubarManageLists">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar 
+{
+	background-color: qlineargradient(spread:repeat, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(227, 227, 227, 255),stop:1 rgba(187, 187, 187, 255));
+	border: 1px solid #f1f1f1;
+	color: #000;
+
+}
+
+
+QMenuBar#menubarManageLists::item 
+{
+	background-color: transparent;
+
+}
+
+
+QMenuBar#menubarManageLists::item:selected 
+{
+	background-color: rgba(70,162,218,50%);
+	border: 1px solid #46a2da;
+	color: #000;
+
+}
+
+
+QMenuBar#menubarManageLists::item:pressed 
+{
+	background-color: #46a2da;
+	border: 1px solid #46a2da;
+	color: #fff;
+
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

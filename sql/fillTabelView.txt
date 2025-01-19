@@ -1,0 +1,7 @@
+SELECT Orders.OrderNr, Orders.statu, Customer.Name, Customer.Address, Orders.Amount, Products.ProductName, Mandatory.Name , OrderMandatory.Discount 
+FROM Orders
+INNER JOIN Customer ON Orders.customerNR = Customer.CustomerNR
+INNER JOIN OrderPosition ON Orders.OrderNr = OrderPosition.OrderNr
+INNER JOIN Products ON Products.ProductNr = OrderPosition.ProductNr
+INNER JOIN OrderMandatory ON OrderMandatory.OrderID = Orders.OrderNr
+INNER JOIN Mandatory ON Mandatory.MandatoryID = OrderMandatory.MandatoryID

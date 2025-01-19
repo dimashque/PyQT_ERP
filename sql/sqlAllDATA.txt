@@ -1,0 +1,5 @@
+SELECT Orders.OrderNr, Customer.Name, Orders.Amount, Products.ProductName
+From (((Orders
+INNER JOIN Customer ON Orders.customerNR = Customer.CustomerNR)
+INNER JOIN OrderPosition ON Orders.OrderNr = OrderPosition.OrderNr)
+INNER JOIN Products ON Products.ProductNr = OrderPosition.ProductNr)
